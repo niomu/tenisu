@@ -9,15 +9,15 @@ export default async function handler(
     res: NextApiResponse<Data>
 ) {
     if (req.method !== "GET")
-        return res.status(405).json({ error: "Method not allowed" });
+        return res.status(405).json(({} as DataElement));
     const { id } = req.query;
     if (typeof id !== "number")
-        return res.status(400).json({ error: "Bad request" });
+        return res.status(400).json(({} as DataElement));
     try {
         const data = await getPlayers(id);
         res.status(200).json(data);
     } catch (error) {
         console.log(error);
-        res.status(500).json({});
+        res.status(500).json(({} as DataElement));
     }
 }

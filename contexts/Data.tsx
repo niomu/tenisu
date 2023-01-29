@@ -4,9 +4,9 @@ import DataReducer from "@/reducers/Data";
 
 export const initialState: DataInterface = { players: [] };
 
-export const DataContext = React.createContext();
+export const DataContext = React.createContext({});
 
-export const DataProvider: React.FC = ({ children }) => {
+export const DataProvider = ({ children }: { children: any }) => {
     const [state, dispatch] = React.useReducer(DataReducer, initialState);
 
     return (

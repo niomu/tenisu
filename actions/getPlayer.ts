@@ -4,7 +4,7 @@ const getPlayer = () => {
     return async (id: number) => {
         try {
             const response = await fetch(
-                `/api/get-player?id=${encodeURI(id)}`
+                `/api/get-player?id=${encodeURI(id.toString())}`
             );
             const data = await response.json();
             return data;

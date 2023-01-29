@@ -9,7 +9,7 @@ export default async function handler(
     res: NextApiResponse<Data>
 ) {
     if (req.method !== "GET")
-        return res.status(405).json({ error: "Method not allowed" });
+        return res.status(405).json(({} as DataInterface));
     try {
         const data = await getPlayers(4);
         res.status(200).json({ players: data });

@@ -5,7 +5,7 @@ import searchPlayer from "@/actions/searchPlayer";
 
 export default function SearchBar() {
     const [playerName, setPlayerName] = useState("");
-    const { state, dispatch } = useContext(DataContext);
+    const { state, dispatch } = useContext(DataContext) as any;
 
     return (
         <div className={styles.container}>

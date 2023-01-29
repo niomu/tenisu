@@ -1,3 +1,3 @@
-export default function PlayerDetails() {
+export default function PlayerDetails({ setSelected }: { setSelected: any }) {
     return <></>;
 }

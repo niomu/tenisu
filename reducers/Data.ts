@@ -5,7 +5,7 @@ export const SEARCH_PLAYER = "SEARCH_PLAYER";
 export const GET_PLAYERS = "GET_PLAYERS";
 export const RESET_DATA = "RESET_DATA";
 
-const DataReducer = (state, action: any): DataInterface => {
+const DataReducer = (state: DataInterface, action: any): DataInterface => {
     switch (action.type) {
         case SEARCH_PLAYER:
             return {
