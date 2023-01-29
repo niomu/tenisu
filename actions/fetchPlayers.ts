@@ -1,6 +1,6 @@
 import { GET_PLAYERS } from "@/reducers/Data";
 
-const fetchPlayers = (dispatch) => {
+const fetchPlayers = (dispatch: any) => {
     return async () => {
         try {
             const response = await fetch("/api/home");

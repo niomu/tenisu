@@ -1,7 +1,7 @@
 import { SEARCH_PLAYER } from "@/reducers/Data";
 
-const seachPlayer = (dispatch) => {
-    return async (search) => {
+const seachPlayer = (dispatch: any) => {
+    return async (search: string) => {
         try {
             const response = await fetch(
                 `/api/search?search=${encodeURI(search)}`

@@ -1,7 +1,7 @@
 import { SEARCH_PLAYER } from "@/reducers/Data";
 
 const getPlayer = () => {
-    return async (id) => {
+    return async (id: number) => {
         try {
             const response = await fetch(
                 `/api/get-player?id=${encodeURI(id)}`
